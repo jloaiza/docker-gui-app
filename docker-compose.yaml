@@ -1,0 +1,13 @@
+version: '3'
+services:
+
+  gui-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - DEBUG=${DEBUG}
+      - DISPLAY=${DISPLAY}
+      - X_COOKIE=${X_COOKIE}
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
